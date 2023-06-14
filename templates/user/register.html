@@ -1,0 +1,22 @@
+{% extends "exxen.html" %}
+{% load static%}
+
+{% block content %}
+
+    <div class="container">
+        <form action="" method="POST" metgod class="w-50 m-auto border p-4 text-light">
+        <!-- Veritabanına bir değer göndericeksek POST methodu kullanılır -->
+            {% csrf_token %}
+            <label for="">Kullanıcı Adı</label>
+            <input type="text" name="kullanici" required id="" class="form-control">
+            <label for="">Email</label>
+            <input type="email" name="email" required id="" class="form-control">
+            <label for="">Şifre</label>
+            <input type="password" name="sifre1" required id="" class="form-control">
+            <label for="">Şifre Onay</label>
+            <input type="password" name="sifre2" required id="" class="form-control">
+            <input type="submit" value="Kayıt Ol" required class="btn btn-primary mt-2">
+        </form>
+    </div>
+
+{% endblock content %}
